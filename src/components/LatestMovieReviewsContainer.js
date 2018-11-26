@@ -17,6 +17,13 @@ state={
        .then(response => response.json())
        .then(movies => this.setState({ reviews:movies.results }))
    }
-
+   render() {
+       return (
+         <div className="latest-movie-reviews">
+            <MovieReviews reviews={this.state.reviews} />
+         </div>
+       )
+     }
+   }
   
 }
